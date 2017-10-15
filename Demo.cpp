@@ -11,7 +11,8 @@ int main(int argc, char **argv)
 
   /* Open video file */
   CvCapture *capture = 0;
-  capture = cvCaptureFromAVI("dataset/video.avi");
+  //capture = cvCaptureFromAVI("dataset/video.avi");
+  capture = cvCaptureFromFile("rtsp://192.168.1.28:8554/live.ts");
   if(!capture){
     std::cerr << "Cannot open video!" << std::endl;
     return 1;
